@@ -148,10 +148,7 @@ const Index = () => {
                 <Icon name="BarChart3" className="h-4 w-4 mr-2" />
                 Аналитика
               </Button>
-              <Button variant="ghost" size="sm">
-                <Icon name="Settings" className="h-4 w-4 mr-2" />
-                Настройки
-              </Button>
+
               <Button variant="ghost" size="sm">
                 <Icon name="User" className="h-4 w-4 mr-2" />
                 Профиль
@@ -163,11 +160,10 @@ const Index = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Tabs defaultValue="timer" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-4 lg:w-[400px]">
+          <TabsList className="grid w-full grid-cols-3 lg:w-[300px]">
             <TabsTrigger value="timer">Таймер</TabsTrigger>
             <TabsTrigger value="projects">Проекты</TabsTrigger>
             <TabsTrigger value="analytics">Аналитика</TabsTrigger>
-            <TabsTrigger value="settings">Настройки</TabsTrigger>
           </TabsList>
 
           {/* Главная страница - Таймер */}
@@ -480,105 +476,7 @@ const Index = () => {
             </div>
           </TabsContent>
 
-          {/* Настройки */}
-          <TabsContent value="settings" className="space-y-6">
-            <h2 className="text-3xl font-bold">Настройки аккаунта</h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card className="animate-fade-in">
-                <CardHeader>
-                  <CardTitle>Профиль пользователя</CardTitle>
-                  <CardDescription>Основная информация о вашем аккаунте</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Имя пользователя</label>
-                    <Input defaultValue="Алексей Петров" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
-                    <Input defaultValue="alex@example.com" type="email" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Часовой пояс</label>
-                    <Input defaultValue="UTC+3 (Москва)" />
-                  </div>
-                  <Button className="w-full">
-                    <Icon name="Save" className="h-4 w-4 mr-2" />
-                    Сохранить изменения
-                  </Button>
-                </CardContent>
-              </Card>
 
-              <Card className="animate-fade-in">
-                <CardHeader>
-                  <CardTitle>Уведомления</CardTitle>
-                  <CardDescription>Настройте предпочтения уведомлений</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <label className="text-sm font-medium">Email уведомления</label>
-                      <p className="text-xs text-muted-foreground">Получать отчеты на email</p>
-                    </div>
-                    <input type="checkbox" defaultChecked className="toggle" />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <label className="text-sm font-medium">Напоминания о перерывах</label>
-                      <p className="text-xs text-muted-foreground">Уведомления каждые 25 минут</p>
-                    </div>
-                    <input type="checkbox" defaultChecked className="toggle" />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <label className="text-sm font-medium">Темная тема</label>
-                      <p className="text-xs text-muted-foreground">Автоматическое переключение</p>
-                    </div>
-                    <input type="checkbox" className="toggle" />
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="animate-fade-in">
-                <CardHeader>
-                  <CardTitle>Экспорт данных</CardTitle>
-                  <CardDescription>Скачайте данные о времени работы</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Button variant="outline" className="w-full">
-                    <Icon name="Download" className="h-4 w-4 mr-2" />
-                    Скачать CSV отчет
-                  </Button>
-                  <Button variant="outline" className="w-full">
-                    <Icon name="FileText" className="h-4 w-4 mr-2" />
-                    Экспорт в PDF
-                  </Button>
-                  <Button variant="outline" className="w-full">
-                    <Icon name="Calendar" className="h-4 w-4 mr-2" />
-                    Синхронизация с календарем
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="animate-fade-in">
-                <CardHeader>
-                  <CardTitle>Опасная зона</CardTitle>
-                  <CardDescription>Необратимые действия с аккаунтом</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Button variant="destructive" className="w-full">
-                    <Icon name="Trash2" className="h-4 w-4 mr-2" />
-                    Удалить все данные
-                  </Button>
-                  <Button variant="destructive" className="w-full">
-                    <Icon name="UserX" className="h-4 w-4 mr-2" />
-                    Удалить аккаунт
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
         </Tabs>
       </div>
     </div>
